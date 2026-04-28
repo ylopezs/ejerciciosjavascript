@@ -7,11 +7,11 @@ Contexto: Partiremos desde la creación de la carpeta raíz de nuestro proyecto 
 Abre tu terminal en Codespaces y ejecuta los siguientes comandos para configurar Vite + React:
 Bash
 
-# 1. Crear el proyecto (reemplaza 'mi-app-ppi' por el nombre de tu proyecto)
-npm create vite@latest mi-app-ppi -- --template react
+# 1. Crear el proyecto 
+npm create vite@latest holamundo -- --template react
 
 # 2. Entrar a la carpeta
-cd mi-app-ppi
+cd holamundo
 
 # 3. Instalar las dependencias de React
 npm install
