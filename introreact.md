@@ -34,7 +34,7 @@ Son los "argumentos" que le pasas al componente. Permiten que un mismo component
 Crea los siguientes archivos dentro de src/components/:
 A. Header.jsx (Información General)
 JavaScript
-
+```
 export function Header({ titulo, grupo }) {
   return (
     <header className="header-main">
@@ -43,12 +43,12 @@ export function Header({ titulo, grupo }) {
     </header>
   );
 }
-
+```
 B. EntidadCard.jsx (Representación del ER)
 
 Usa este componente para mostrar los datos que definiste en tu diagrama Entidad-Relación.
 JavaScript
-
+```
 export function EntidadCard({ nombreEntidad, descripcion, cantidadCampos }) {
   return (
     <div className="card">
@@ -58,10 +58,10 @@ export function EntidadCard({ nombreEntidad, descripcion, cantidadCampos }) {
     </div>
   );
 }
-
+```
 C. BotonEstado.jsx (Componente Funcional)
 JavaScript
-
+```
 export function BotonEstado({ texto, activo }) {
   const color = activo ? "green" : "gray";
   return (
@@ -70,12 +70,12 @@ export function BotonEstado({ texto, activo }) {
     </button>
   );
 }
-
+```
 D. ContenedorPPI.jsx (Componente de Composición)
 
 Este componente recibe una lista de datos (Arrays) y los renderiza.
 JavaScript
-
+```
 import { EntidadCard } from "./EntidadCard";
 
 export function ContenedorPPI({ entidades }) {
@@ -93,12 +93,12 @@ export function ContenedorPPI({ entidades }) {
     </section>
   );
 }
-
+```
 4. Integración en App.jsx
 
 Limpia tu archivo src/App.jsx y conecta todo:
 JavaScript
-
+```
 import { Header } from "./components/Header";
 import { ContenedorPPI } from "./components/ContenedorPPI";
 import { BotonEstado } from "./components/BotonEstado";
@@ -121,3 +121,4 @@ function App() {
 }
 
 export default App;
+```
