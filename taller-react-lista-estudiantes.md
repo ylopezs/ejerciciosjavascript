@@ -4,7 +4,6 @@
 
 En su repositorio `workspace`, creen una carpeta con la fecha de hoy:
 
-    cd 05-05
     workspace/
       05-05
 
@@ -17,6 +16,7 @@ Entren a esa carpeta desde la terminal.
 Usen Vite (recomendado por rapidez):
 
 ``` bash
+cd 05-05
 npm create vite@latest
 ```
 
