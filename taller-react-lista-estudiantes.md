@@ -4,6 +4,7 @@
 
 En su repositorio `workspace`, creen una carpeta con la fecha de hoy:
 
+    cd 05-05
     workspace/
       05-05
 
