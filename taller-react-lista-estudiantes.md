@@ -5,7 +5,7 @@
 En su repositorio `workspace`, creen una carpeta con la fecha de hoy:
 
     workspace/
-      2026-05-05-lista-estudiantes/
+      05-05
 
 Entren a esa carpeta desde la terminal.
 
