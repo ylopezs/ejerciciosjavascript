@@ -184,7 +184,7 @@ Usando un bucle, calcula la suma de todos los números del 1 al 100 y muestra el
 
 ---
 
-## 🏁 Reto Final — Integrando todo
+##  Reto Final — Integrando todo
 
 Crea un programa que simule un cajero automático básico:
 
