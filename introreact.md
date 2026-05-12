@@ -1,7 +1,4 @@
-Perfecto, si ya dominan Codespaces, podemos saltar directo a la acción técnica. Aquí tienes la guía estructurada para que la sigan paso a paso. Está diseñada para que la cargues en su GitHub y ellos la usen como "checklist".
-Guía: Desarrollo de Aplicaciones con React, Componentes y Props
 
-Contexto: Partiremos desde la creación de la carpeta raíz de nuestro proyecto dentro de tu entorno de Codespaces.
 1. Inicialización del Proyecto
 
 Abre tu terminal en Codespaces y ejecuta los siguientes comandos para configurar Vite + React:
