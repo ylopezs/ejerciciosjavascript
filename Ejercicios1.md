@@ -1,4 +1,4 @@
-# 🧪 Taller de JavaScript — Node.js en Codespaces
+#  Taller de JavaScript — Node.js en Codespaces
 
 > **Instrucciones:** Resuelve cada ejercicio creando un archivo `.js` y ejecútalo con `node nombre-archivo.js`. No uses el navegador, todo corre en la terminal.
 
