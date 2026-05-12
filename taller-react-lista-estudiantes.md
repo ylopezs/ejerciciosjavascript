@@ -1,6 +1,6 @@
-# 🧪 Taller React --- Lista de Estudiantes
+#  Taller React --- Lista de Estudiantes
 
-## 📁 1. Estructura inicial
+##  1. Estructura inicial
 
 En su repositorio `workspace`, creen una carpeta con la fecha de hoy:
 
@@ -11,7 +11,7 @@ Entren a esa carpeta desde la terminal.
 
 ------------------------------------------------------------------------
 
-## ⚛️ 2. Creación del proyecto
+##  2. Creación del proyecto
 
 Usen Vite (recomendado por rapidez):
 
@@ -34,7 +34,7 @@ npm run dev
 
 ------------------------------------------------------------------------
 
-## 🧹 3. Limpieza del proyecto
+##  3. Limpieza del proyecto
 
 Eliminar o modificar:
 
@@ -58,7 +58,7 @@ export default App;
 
 ------------------------------------------------------------------------
 
-## 👤 4. Crear componente `Estudiante`
+##  4. Crear componente `Estudiante`
 
 Crear carpeta `components` y dentro el archivo:
 
@@ -79,7 +79,7 @@ export default Estudiante;
 
 ------------------------------------------------------------------------
 
-## 🔌 5. Uso de Props
+##  5. Uso de Props
 
 Editar `App.jsx`:
 
@@ -102,9 +102,9 @@ export default App;
 
 ------------------------------------------------------------------------
 
-## 📋 6. Crear componente `Lista`
+##  6. Crear componente `Lista`
 
-📄 `Lista.jsx`
+ `Lista.jsx`
 
 ``` jsx
 import Estudiante from "./Estudiante";
@@ -123,7 +123,7 @@ export default Lista;
 
 ------------------------------------------------------------------------
 
-## 🔁 7. Inyección de props con un vector
+##  7. Inyección de props con un vector
 
 Editar `Lista.jsx`:
 
@@ -155,7 +155,7 @@ export default Lista;
 
 ------------------------------------------------------------------------
 
-## 🔗 8. Usar `Lista` en `App`
+##  8. Usar `Lista` en `App`
 
 ``` jsx
 import Lista from "./components/Lista";
@@ -174,7 +174,7 @@ export default App;
 
 ------------------------------------------------------------------------
 
-## 🎯 Objetivo del taller
+##  Objetivo del taller
 
 Al finalizar, el estudiante debe entender:
 
@@ -186,7 +186,7 @@ Al finalizar, el estudiante debe entender:
 
 ------------------------------------------------------------------------
 
-## 🚀 Extra (opcional)
+##  Extra (opcional)
 
 -   Agregar campo `carrera`
 -   Agregar estilos básicos
