@@ -32,6 +32,7 @@ Los estudiantes crearán una calculadora en dos etapas:
 Crear una carpeta:
 
 ```bash
+mkdir 14-05
 cd 14-05
 mkdir calculadora-funciones
 cd calculadora-funciones
