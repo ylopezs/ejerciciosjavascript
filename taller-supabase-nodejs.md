@@ -1,36 +1,53 @@
-# Taller Supabase + Node.js — API REST y Console.log
 
-# Taller Básico de Supabase + Node.js
+# Taller 1 — Supabase + SQL CRUD
 
 ## Objetivos
 
 Aprender a:
 
-- Crear tablas en Supabase
+- Crear proyectos en Supabase
+- Crear tablas SQL
 - Relacionar tablas
 - Insertar datos
-- Consultar datos SQL
-- Usar la API REST automática de Supabase
-- Consumir la API usando Node.js
-- Mostrar resultados con `console.log()`
+- Consultar datos
+- Actualizar registros
+- Eliminar registros
+- Realizar consultas SQL complejas
+- Comprender cómo Supabase genera APIs automáticamente
+- Entender la importancia de las relaciones entre tablas
 
 ---
 
-# Parte 1 — Crear proyecto en Supabase
+# Parte 1 — Introducción a Supabase
+
+## ¿Qué es Supabase?
+
+Supabase es una plataforma backend que permite:
+
+- Crear bases de datos PostgreSQL
+- Generar APIs REST automáticamente
+- Gestionar autenticación
+- Crear almacenamiento de archivos
+- Construir aplicaciones modernas rápidamente
+
+---
+
+# Parte 2 — Crear proyecto en Supabase
 
 Ir a:
 
 https://supabase.com
 
-Pasos:
+## Pasos
 
 1. Crear cuenta
 2. Crear nuevo proyecto
-3. Esperar que la base de datos termine de configurarse
+3. Elegir nombre y contraseña
+4. Esperar que la base de datos termine de configurarse
 
 ---
 
-# Parte 2 — Crear tablas
+# Parte 3 — Crear tablas usando SQL
 
 ## Abrir SQL Editor
 
@@ -72,7 +89,7 @@ CREATE TABLE estudiantes (
 
 ---
 
-# Parte 3 — Insertar datos
+# Parte 4 — Insertar datos iniciales
 
 ## Insertar cursos
 
@@ -99,7 +116,9 @@ VALUES
 
 ---
 
-# Parte 4 — Consultas SQL
+# Parte 5 — CRUD SQL completo
+
+# CREATE — Insertar datos
 
 ## Ver cursos
 
@@ -117,7 +136,86 @@ SELECT * FROM estudiantes;
 
 ---
 
-## JOIN estudiantes + cursos
+## Insertar nuevos estudiantes
+
+```sql
+INSERT INTO estudiantes (nombre, edad, email, curso_id)
+VALUES
+('Camila', 23, 'camila@email.com', 1);
+```
+
+---
+
+## Ejercicios CREATE
+
+### Ejercicio 1
+Insertar 5 estudiantes nuevos.
+
+### Ejercicio 2
+Insertar 3 cursos nuevos.
+
+### Ejercicio 3
+Crear sus propios grupos de cursos.
+
+Ejemplos:
+- Videojuegos
+- Música
+- Diseño
+- Inteligencia Artificial
+- Ciberseguridad
+
+---
+
+# READ — Consultas SQL
+
+## SELECT básico
+
+```sql
+SELECT * FROM estudiantes;
+```
+
+---
+
+## SELECT columnas específicas
+
+```sql
+SELECT nombre, edad
+FROM estudiantes;
+```
+
+---
+
+## WHERE
+
+```sql
+SELECT *
+FROM estudiantes
+WHERE edad > 20;
+```
+
+---
+
+## ORDER BY
+
+```sql
+SELECT *
+FROM estudiantes
+ORDER BY edad DESC;
+```
+
+---
+
+## LIMIT
+
+```sql
+SELECT *
+FROM estudiantes
+LIMIT 3;
+```
+
+---
+
+# JOIN estudiantes + cursos
 
 ```sql
 SELECT 
@@ -132,7 +230,148 @@ ON estudiantes.curso_id = cursos.id;
 
 ---
 
-# Parte 5 — Obtener credenciales API
+# Consultas más complejas
+
+## COUNT
+
+```sql
+SELECT curso_id, COUNT(*)
+FROM estudiantes
+GROUP BY curso_id;
+```
+
+---
+
+## LIKE
+
+```sql
+SELECT *
+FROM estudiantes
+WHERE nombre LIKE 'A%';
+```
+
+---
+
+## Múltiples condiciones
+
+```sql
+SELECT *
+FROM estudiantes
+WHERE edad > 20
+AND curso_id = 1;
+```
+
+---
+
+# UPDATE — Actualizar registros
+
+## Actualizar edad
+
+```sql
+UPDATE estudiantes
+SET edad = 30
+WHERE id = 1;
+```
+
+---
+
+## Actualizar correo
+
+```sql
+UPDATE estudiantes
+SET email = 'nuevo@email.com'
+WHERE id = 2;
+```
+
+---
+
+## Ejercicios UPDATE
+
+### Ejercicio 1
+Actualizar nombres de estudiantes.
+
+### Ejercicio 2
+Actualizar profesores.
+
+### Ejercicio 3
+Cambiar estudiantes de curso.
+
+---
+
+# DELETE — Eliminar registros
+
+## Eliminar estudiante
+
+```sql
+DELETE FROM estudiantes
+WHERE id = 1;
+```
+
+---
+
+## Ejercicios DELETE
+
+### Ejercicio 1
+Eliminar estudiantes específicos.
+
+### Ejercicio 2
+Eliminar cursos creados por el grupo.
+
+### Ejercicio 3
+Eliminar registros incorrectos.
+
+---
+
+# Parte 6 — Reflexiones sobre Supabase y SQL
+
+## Preguntas para discutir
+
+- ¿Por qué SQL sigue siendo tan importante?
+- ¿Qué ventajas tiene PostgreSQL?
+- ¿Por qué las relaciones entre tablas son importantes?
+- ¿Qué problemas ocurren si borramos datos incorrectamente?
+- ¿Qué ventajas tiene Supabase frente a crear un backend desde cero?
+- ¿Por qué Supabase puede generar APIs automáticamente?
+
+---
+
+# Taller 2 — API REST + Node.js + Linux
+
+# Objetivos
+
+Aprender a:
+
+- Consumir APIs REST
+- Usar Node.js desde terminal Linux
+- Comprender endpoints
+- Usar métodos HTTP
+- Consumir la API automática de Supabase
+- Mostrar resultados usando `console.log()`
+- Organizar archivos por endpoint
+- Usar herramientas de prueba de APIs en VSCode
+
+---
+
+# Parte 1 — Introducción a APIs REST
+
+## Conceptos importantes
+
+### API
+Permite que programas se comuniquen entre sí.
+
+### JSON
+Formato usado para enviar información.
+
+### Métodos HTTP
+
+- GET → consultar
+- POST → crear
+- PATCH → actualizar
+- DELETE → eliminar
+
+---
+
+# Parte 2 — Obtener credenciales API
 
 Ir a:
 
@@ -146,7 +385,7 @@ Copiar:
 
 ---
 
-# Parte 6 — Crear proyecto Node.js
+# Parte 3 — Terminal Linux
 
 ## Crear carpeta
 
@@ -154,15 +393,11 @@ Copiar:
 mkdir supabase-api
 ```
 
----
-
 ## Entrar a la carpeta
 
 ```bash
 cd supabase-api
 ```
-
----
 
 ## Inicializar Node.js
 
@@ -172,19 +407,50 @@ npm init -y
 
 ---
 
-# Parte 7 — Crear archivo JavaScript
+# Comandos Linux importantes
 
-Crear archivo:
-
-```txt
-app.js
+```bash
+pwd
+ls
+cd
+mkdir
+touch
 ```
 
 ---
 
-# Parte 8 — Consumir API REST
+# Parte 4 — Probar APIs en VSCode
 
-## Código completo
+## Extensiones recomendadas
+
+### Thunder Client
+
+Permite:
+- hacer GET
+- hacer POST
+- probar APIs
+- ver respuestas JSON
+
+---
+
+# Parte 5 — Crear archivos JavaScript
+
+## Estructura recomendada
+
+```txt
+supabase-api/
+│
+├── get-estudiantes.js
+├── post-estudiante.js
+├── patch-estudiante.js
+├── delete-estudiante.js
+```
+
+---
+
+# Parte 6 — Consumir API REST
+
+# GET — Consultar estudiantes
 
 ```javascript
 const url =
@@ -211,6 +477,8 @@ async function obtenerEstudiantes() {
     console.log("Respuesta de la API:");
     console.log(data);
 
+    console.table(data);
+
   } catch (error) {
 
     console.log("Error:");
@@ -224,172 +492,59 @@ obtenerEstudiantes();
 
 ---
 
-# Parte 9 — Ejecutar el programa
-
-## Ejecutar Node.js
+# Ejecutar el programa
 
 ```bash
-node app.js
+node get-estudiantes.js
 ```
 
 ---
 
-# Resultado esperado
-
-```bash
-Consultando API...
-
-Respuesta de la API:
-
-[
-  {
-    id: 1,
-    nombre: 'Ana',
-    edad: 20,
-    email: 'ana@email.com',
-    curso_id: 1
-  }
-]
-```
-
----
-
-# Parte 10 — Insertar datos desde Node.js
+# POST — Crear estudiante
 
 ```javascript
 const url =
   "https://TU-PROYECTO.supabase.co/rest/v1/estudiantes";
+```
 
-const headers = {
-  apikey: "TU_ANON_KEY",
-  Authorization: "Bearer TU_ANON_KEY",
-  "Content-Type": "application/json",
-  Prefer: "return=representation",
-};
-
-async function crearEstudiante() {
-
-  const estudiante = {
-    nombre: "Camila",
-    edad: 23,
-    email: "camila@email.com",
-    curso_id: 1,
-  };
-
-  try {
-
-    console.log("Insertando estudiante...");
-
-    const response = await fetch(url, {
-      method: "POST",
-      headers,
-      body: JSON.stringify(estudiante),
-    });
-
-    const data = await response.json();
-
-    console.log("Estudiante creado:");
-    console.log(data);
-
-  } catch (error) {
-
-    console.log("Error:");
-    console.log(error);
-
-  }
-}
-
-crearEstudiante();
+```javascript
+method: "POST"
 ```
 
 ---
 
-# Parte 11 — Actualizar datos
+# PATCH — Actualizar estudiante
 
 ```javascript
 const url =
   "https://TU-PROYECTO.supabase.co/rest/v1/estudiantes?id=eq.1";
+```
 
-const headers = {
-  apikey: "TU_ANON_KEY",
-  Authorization: "Bearer TU_ANON_KEY",
-  "Content-Type": "application/json",
-};
-
-async function actualizarEstudiante() {
-
-  try {
-
-    console.log("Actualizando estudiante...");
-
-    const response = await fetch(url, {
-      method: "PATCH",
-      headers,
-      body: JSON.stringify({
-        edad: 30,
-      }),
-    });
-
-    console.log("Estudiante actualizado");
-
-  } catch (error) {
-
-    console.log(error);
-
-  }
-}
-
-actualizarEstudiante();
+```javascript
+method: "PATCH"
 ```
 
 ---
 
-# Parte 12 — Eliminar datos
+# DELETE — Eliminar estudiante
 
 ```javascript
 const url =
   "https://TU-PROYECTO.supabase.co/rest/v1/estudiantes?id=eq.1";
+```
 
-const headers = {
-  apikey: "TU_ANON_KEY",
-  Authorization: "Bearer TU_ANON_KEY",
-};
-
-async function eliminarEstudiante() {
-
-  try {
-
-    console.log("Eliminando estudiante...");
-
-    await fetch(url, {
-      method: "DELETE",
-      headers,
-    });
-
-    console.log("Estudiante eliminado");
-
-  } catch (error) {
-
-    console.log(error);
-
-  }
-}
-
-eliminarEstudiante();
+```javascript
+method: "DELETE"
 ```
 
 ---
 
-# Parte 13 — Ejercicios
+# Parte 7 — Ejercicios CRUD usando API
 
 ## Ejercicio 1
-
-Insertar 3 estudiantes nuevos desde Node.js.
-
----
+Insertar 3 estudiantes desde Node.js.
 
 ## Ejercicio 2
-
 Consultar únicamente estudiantes mayores de 20 años.
 
 Pista:
@@ -398,23 +553,14 @@ Pista:
 ?edad=gt.20
 ```
 
----
-
 ## Ejercicio 3
-
 Actualizar el nombre de un estudiante.
 
----
-
 ## Ejercicio 4
-
 Eliminar un estudiante específico.
 
----
-
 ## Ejercicio 5
-
-Mostrar los resultados usando:
+Mostrar resultados usando:
 
 ```javascript
 console.table(data)
@@ -422,7 +568,46 @@ console.table(data)
 
 ---
 
-# Parte 14 — Próximo Taller
+# Parte 8 — Proyecto por grupos
+
+Cada grupo debe:
+
+- Crear sus propias tablas
+- Insertar datos
+- Crear endpoints CRUD
+- Tener:
+  - GET
+  - POST
+  - PATCH
+  - DELETE
+
+---
+
+# Ideas de proyectos
+
+- videojuegos
+- películas
+- restaurantes
+- mascotas
+- música
+- libros
+
+---
+
+# Parte 9 — Reflexiones sobre APIs
+
+## Preguntas para discutir
+
+- ¿Por qué las APIs son tan importantes?
+- ¿Qué diferencia existe entre base de datos y API?
+- ¿Por qué JSON es tan usado?
+- ¿Qué ventajas tiene separar frontend y backend?
+- ¿Cómo se conectan las aplicaciones modernas?
+- ¿Qué ocurre si una API no valida correctamente los datos?
+
+---
+
+# Parte 10 — Próximos Talleres
 
 Más adelante podrán aprender:
 
@@ -432,3 +617,5 @@ Más adelante podrán aprender:
 - Roles
 - Permisos
 - RLS
+- Frontend consumiendo APIs
+- Deploy de aplicaciones
