@@ -457,8 +457,7 @@ const url =
   "https://TU-PROYECTO.supabase.co/rest/v1/estudiantes";
 
 const headers = {
-  apikey: "TU_ANON_KEY",
-  Authorization: "Bearer TU_ANON_KEY",
+  apikey: "secret_key",
   "Content-Type": "application/json",
 };
 
