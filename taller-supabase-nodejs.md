@@ -545,6 +545,7 @@ async function crearEstudiante() {
   }
 }
 crearEstudiante();
+```
 
 ---
 
