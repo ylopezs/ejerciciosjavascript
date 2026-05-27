@@ -601,7 +601,27 @@ const url =
 ```
 
 ```javascript
-method: "DELETE"
+async function eliminarEstudiante(id) {
+  try {
+
+    console.log("Eliminando estudiante...");
+
+    const response = await fetch(`${url}?id=eq.${id}`, {
+      method: "DELETE",
+      headers,
+    });
+
+    console.log("Estudiante eliminado");
+    console.log(response.status);
+
+  } catch (error) {
+
+    console.log("Error:");
+    console.log(error);
+
+  }
+}
+
 ```
 
 ---
