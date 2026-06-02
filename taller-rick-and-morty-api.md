@@ -46,9 +46,8 @@ obtenerPersonajes();
 
 ## Ejercicios Adicionales
 
-1. Mostrar únicamente los nombres de los personajes.
-2. Mostrar nombre, estado y especie.
-3. Implementar manejo de errores con `try/catch`.
+1. Mostrar únicamente los nombres de los personajes. Creado una función llamada soloNombres()
+2. Implementar manejo de errores con `try/catch`.
 4. Investigar cómo obtener otras páginas usando el parámetro `page`.
 
 ### Bonus
