@@ -20,20 +20,21 @@ Al finalizar este taller podrás:
 
 ## Parte 1 — Crear el proyecto en GitHub Codespaces
 
-### 1.1 Crear el repositorio
 
-1. Ve a [github.com](https://github.com) e inicia sesión.
-2. Haz clic en **New repository**.
-3. Nómbralo `rick-and-morty-react`.
-4. Marca **Add a README file** y haz clic en **Create repository**.
 
-### 1.2 Abrir Codespaces
+### 1.1 Abrir Codespaces
 
 1. Dentro del repositorio, haz clic en el botón verde **Code**.
 2. Selecciona la pestaña **Codespaces**.
 3. Haz clic en **Create codespace on main**.
 
 Espera a que el entorno termine de cargar (puede tomar 1–2 minutos).
+
+
+### 1.2 Crear carpeta del proyecto
+
+1. Dentro de la carpeta del dia de hoy crear una carpeta llamada rickandmorty
+2. entrar a esta carpeta desde la terminal usando CD
 
 ### 1.3 Crear la aplicación React con Vite
 
