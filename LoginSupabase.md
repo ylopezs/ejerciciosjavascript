@@ -83,13 +83,32 @@ Codespaces genera una URL pública distinta cada vez que reconstruyes el entorno
    - **Confirm email**: si lo dejas **activado**, el usuario debe confirmar su correo antes de poder iniciar sesión (más realista, pero requiere revisar el correo).
    - Para agilizar las pruebas en clase, puedes **desactivar** temporalmente "Confirm email"; así el registro deja la sesión activa de inmediato.
 
-### 3.5 (Opcional) Revisar los usuarios registrados
+### 3.5 Crear usuarios
+
+Hay dos formas de crear usuarios para probar el login:
+
+**Opción A — Desde la app (registro normal):**
+Es el flujo que implementa el formulario del paso 6 (`isSignUp` → `supabase.auth.signUp`). El estudiante se registra con su propio correo y contraseña desde la pantalla de la aplicación.
+
+**Opción B — Manualmente desde el panel de Supabase (útil para pruebas rápidas o para crear un usuario de prueba sin pasar por el formulario):**
 
 1. Ve a **Authentication → Users**.
-2. Ahí verás cada cuenta creada desde el formulario de registro, su email y estado de confirmación.
-3. Desde aquí también puedes eliminar usuarios de prueba manualmente.
+2. Haz clic en **Add user** → **Create new user**.
+3. Completa:
+   - **Email**: por ejemplo `prueba@ejemplo.com`
+   - **Password**: mínimo 6 caracteres
+   - Marca **Auto Confirm User** si quieres que el usuario quede confirmado de inmediato (así no necesita revisar el correo).
+4. Haz clic en **Create user**.
+5. Ese usuario ya puede iniciar sesión desde la app usando el formulario de login (no necesita pasar por "Registrarme").
 
-### 3.6 (Opcional) Tabla de perfiles con RLS
+> Recomendación para la clase: crea al menos un usuario manual con **Auto Confirm User** activado, así puedes probar el login de inmediato sin depender de la confirmación por correo.
+
+### 3.6 Revisar los usuarios registrados
+
+1. En **Authentication → Users** verás cada cuenta creada (ya sea desde el formulario o creada manualmente), su email y estado de confirmación (columna **Confirmed**).
+2. Desde ahí también puedes eliminar usuarios de prueba o reenviar el correo de confirmación.
+
+### 3.7 (Opcional) Tabla de perfiles con RLS
 
 Si más adelante quieres guardar datos adicionales del usuario (nombre, avatar, etc.), crea una tabla `profiles` protegida con Row Level Security:
 
