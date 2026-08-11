@@ -384,15 +384,3 @@ h1 {
 
 ---
 
-## Para el profesor: soluciones de referencia
-
-<details>
-<summary>Ver soluciones (clic para expandir)</summary>
-
-1. Agregar `categoria: 'sin categoría'` a la tarea 4, o usar `tarea.categoria?.toUpperCase() ?? 'SIN CATEGORÍA'`.
-2. Cambiar `useEffect(() => {...})` por `useEffect(() => {...}, [])` (o quitar el `setContador` si no hace falta ejecutar en cada render).
-3. Cambiar `tarea.completada === 'true'` por `tarea.completada === true` (o directamente `tarea.completada`).
-4. Cambiar `tareas.push(...)` por `setTareas([...tareas, nuevaTarea])`.
-5. Envolver el código en `try { ... } catch (e) { console.error(e); setError(e.message); }` y mostrar el error en pantalla.
-
-</details>
