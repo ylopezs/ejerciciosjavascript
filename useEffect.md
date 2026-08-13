@@ -368,14 +368,3 @@ git push
 
 ---
 
-## Para el profesor: soluciones de referencia
-
-<details>
-<summary>Ver soluciones (clic para expandir)</summary>
-
-1. Agregar `return () => clearInterval(id);` al final del efecto de `Reloj`.
-2. Cambiar `setContador(contador + 1)` por `setContador((c) => c + 1)` dentro del `setInterval` (así no depende del `contador` capturado por el closure).
-3. Agregar `return () => window.removeEventListener('resize', manejarResize);` al final del efecto de `RastreadorVentana`. (Punto extra: también se puede discutir por qué convendría usar `[]` como dependencia en vez de `[ancho]`, ya que el listener no necesita reiniciarse.)
-4. Cambiar `}, [])` por `}, [id])` en el efecto de `PerfilUsuario`.
-
-</details>
